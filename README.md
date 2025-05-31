@@ -14,14 +14,14 @@ This repository contains scripts developed during my Master's thesis to quantify
 
 ## Main Components
 
-### 1. `GalaxyWeightAssigner`
-Assigns weights to galaxies based on pixel position and detection probability using a precomputed detection map.
-
-### 2. `KiDSGalaxyInjector`
+### 1. `KiDSGalaxyInjector`
 Generates realistic galaxy images with GalSim using KiDS-like parameters and injects them into survey tiles.
 
-### 3. `CatalogComparator`
+### 2. `CatalogComparator`
 Compares injected catalogs with SExtractor-detected sources to quantify the detection efficiency and biases.
+
+### 3. `GalaxyWeightAssigner`
+Assigns weights to galaxies using a precomputed detection probability function. 
 
 ---
 
