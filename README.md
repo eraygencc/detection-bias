@@ -3,7 +3,7 @@ Scripts to quantify the galaxy detection bias in cosmic shear measurements
 
 # Detection Bias in Cosmic Shear Measurements
 
-This repository contains scripts to quantify and correct detection biases of galaxies for cosmic shear analyses. It includes tools for realistic galaxy simulation, injection into survey tiles, catalog comparison after detection, and computation of detection probabilities as weights for shear correlation functions.
+This repository contains scripts to quantify detection bias of galaxies for cosmic shear analyses. It includes tools for realistic galaxy simulation, injection into survey tiles, catalog comparison after detection, and computation of detection probabilities as weights for shear correlation functions.
 
 The methods implemented are described in this paper: [arXiv:2507.01546](https://arxiv.org/pdf/2507.01546)
 
@@ -38,7 +38,7 @@ detection-bias/
 
 ### 3. `GalaxyWeightAssigner.py`
 - Uses the **precomputed detection probability function**.  
-- Assigns **weights to galaxies** to correct for detection bias in shear correlation measurements.  
+- Assigns **weights to galaxies** to quantify the detection bias in shear correlation measurements.  
 - Can be integrated directly into standard cosmic shear pipelines.
 
 ---
