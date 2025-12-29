@@ -3,9 +3,9 @@ Scripts to quantify the galaxy detection bias in cosmic shear measurements
 
 # Detection Bias in Cosmic Shear Measurements
 
-This repository contains scripts developed during my Master's thesis to quantify and correct detection biases in galaxy shape measurements for cosmic shear analyses. It includes tools for realistic galaxy simulation, injection into survey tiles, catalog comparison after detection, and computation of detection probabilities as weights for shear correlation functions.
+This repository contains scripts to quantify and correct detection biases of galaxies for cosmic shear analyses. It includes tools for realistic galaxy simulation, injection into survey tiles, catalog comparison after detection, and computation of detection probabilities as weights for shear correlation functions.
 
-The methods implemented are described in my paper: [arXiv:2507.01546](https://arxiv.org/pdf/2507.01546)
+The methods implemented are described in this paper: [arXiv:2507.01546](https://arxiv.org/pdf/2507.01546)
 
 ---
 
