@@ -56,12 +56,12 @@ pip install -r requirements.txt
 1. **Simulate and inject galaxies**
 
 ```bash
-python KiDSGalaxyInjector.py --config configs/injection_config.yaml
+python galaxy_injector.py --config configs/injection_config.yaml
 ```
-2. ** Compare catalogs **
- ```  python CatalogComparator.py --injected injected_catalog.fits --detected detected_catalog.fits ```
+2. **Compare catalogs**
+ ```  python catalog_comparator.py --injected injected_catalog.fits --detected detected_catalog.fits ```
 
-3. ** Assign weights based on the model to the galaxies**
+3. **Assign weights to the galaxies**
  
 The `GalaxyWeightAssigner.py` script uses the **detection bias model** described in the paper to assign weights to galaxies.  
 The model computes the **detection probability** of a galaxy based on two key quantities:
