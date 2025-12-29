@@ -72,7 +72,7 @@ The model computes the **detection probability** of a galaxy based on two key qu
 The detection probability $p_\mathrm{det}$ is modeled as:
 
 $$
-f(\Delta m, \theta) = 0.5 + \frac{1}{\pi}\, \mathrm{arctan}\left(\frac{b\,\theta - \Delta m}{\delta}\right) ,
+f(\Delta m, \theta) = 0.5 + \frac{1}{\pi} \mathrm{arctan}\left(\frac{b\times\theta - \Delta m}{\delta}\right) ,
 $$
 
 where $a, b, c, d$ are parameters calibrated from injected galaxies and catalog comparisons (see Section 3 of [arXiv:2507.01546](https://arxiv.org/pdf/2507.01546)).
