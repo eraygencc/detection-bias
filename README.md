@@ -13,8 +13,8 @@ The methods implemented are described in my paper: [arXiv:2507.01546](https://ar
 
 ```
 detection-bias/
-├── KiDSGalaxyInjector.py # Simulate and inject galaxies into survey tiles
-├── CatalogComparator.py # Compare injected vs detected catalogs
+├── galaxy_injector.py # Simulate and inject galaxies into survey tiles
+├── catalog_comparator.py # Compare injected vs detected catalogs
 ├── GalaxyWeightAssigner.py # Assign weights based on detection probabilities
 ├── requirements.txt # Python dependencies
 └── README.md
@@ -26,12 +26,12 @@ detection-bias/
 
 ## Main Components
 
-### 1. `KiDSGalaxyInjector.py`
+### 1. `galaxy_injector.py`
 - Generates realistic galaxy images using **GalSim** with KiDS-like parameters.  
 - Injects galaxies into survey tiles for testing detection completeness.  
 - Supports adjustable parameters for flux, size, and position distributions.
 
-### 2. `CatalogComparator.py`
+### 2. `catalog_comparator.py`
 - Compares **injected catalogs** with **SExtractor-detected catalogs**.  
 - Computes **detection efficiency** as a function of galaxy properties (flux, size, etc.).  
 - Outputs detection probability tables for further analysis.
