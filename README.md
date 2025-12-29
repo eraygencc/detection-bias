@@ -50,3 +50,42 @@ Install Python dependencies via:
 ```bash
 pip install -r requirements.txt
 ```
+
+## Usage
+
+1. **Simulate and inject galaxies**
+
+```bash
+python KiDSGalaxyInjector.py --config configs/injection_config.yaml
+```
+2. ** Compare catalogs **
+ ```  python CatalogComparator.py --injected injected_catalog.fits --detected detected_catalog.fits ```
+
+3. ** Assign weights based on the model to the galaxies**
+ 
+The `GalaxyWeightAssigner.py` script uses the **detection bias model** described in the paper to assign weights to galaxies.  
+The model computes the **detection probability** of a galaxy based on two key quantities:
+
+- The **projected separation** $r$ between a galaxy and its **nearest neighbor** (primary galaxy).  
+- The **magnitude difference** $\Delta m$ between the two galaxies.
+
+The detection probability $p_\mathrm{det}$ is modeled as:
+
+$$
+f(\Delta m, \theta) = 0.5 + \frac{1}{\pi}\, \mathrm{arctan}\left(\frac{b\,\theta - \Delta m}{\delta}\right) ,
+$$
+
+where $a, b, c, d$ are parameters calibrated from injected galaxies and catalog comparisons (see Section 3 of [arXiv:2507.01546](https://arxiv.org/pdf/2507.01546)).
+
+Once the detection probability is computed for each galaxy, it can directly be used as weights during the calculation of (shear) correlation functions.
+
+This weight corrects for the **selection bias** introduced by galaxy detection inefficiency in crowded fields.
+
+```bash
+python GalaxyWeightAssigner.py --catalog detected_catalog.fits --weights detection_probs.npy
+```
+
+Note 1: This calculation requires precomputed detection probability function from the CatalogComparator.py output and is intended for HPC environments due to the large number of galaxy pairs.
+Note 2: Scripts are designed for high-performance computing environments due to large data volumes.
+
+
