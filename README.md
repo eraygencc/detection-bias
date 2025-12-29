@@ -75,7 +75,7 @@ $$
 f(\Delta m, \theta) = 0.5 + \frac{1}{\pi} \mathrm{arctan}\left(\frac{b\times\theta - \Delta m}{\delta}\right) ,
 $$
 
-where $a, b, c, d$ are parameters calibrated from injected galaxies and catalog comparisons (see Section 3 of [arXiv:2507.01546](https://arxiv.org/pdf/2507.01546)).
+where $b, \delta$ are parameters calibrated from injected galaxies and catalog comparisons (see Section 3 of [arXiv:2507.01546](https://arxiv.org/pdf/2507.01546)).
 
 Once the detection probability is computed for each galaxy, it can directly be used as weights during the calculation of (shear) correlation functions.
 
